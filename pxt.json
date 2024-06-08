@@ -1,0 +1,25 @@
+{
+    "name": "pxt-kitronik-viewtext32",
+    "version": "1.2.2",
+    "description": "Blocks to simplify using Kitronik :VIEW Text32 board in PXT",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "viewtext32.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "4.0.16",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
