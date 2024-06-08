@@ -3,7 +3,7 @@
  * LCD chip ST7070
  **/
 //% weight=100 color=#00A654 icon="\uf26c" block=":VIEW Text32"
-//% groups='["Show","Format","Characters"]'
+//% groups='["Toon","Instellingen","Karakters"]'
 namespace Kitronik_VIEWTEXT32 {
 
     //Useful LCD constants
@@ -18,39 +18,39 @@ namespace Kitronik_VIEWTEXT32 {
 
     //Enums for selection from blocks
     export enum DisplayLine {
-        //% block="Top"
+        //% block="Boven"
         Top,
-        //% block="Bottom"
+        //% block="Onder"
         Bottom
     }
 
     export enum ScrollDirection {
-        //% block="Left"
+        //% block="Links"
         Left,
-        //% block="Right"
+        //% block="Rechts"
         Right
     }
 
     export enum ScrollPosition {
-        //% block="off screen"
+        //% block="buiten het scherm"
         Off,
-        //% block="on screen"
+        //% block="op het scherm"
         On
     }
 
     export enum ShowAlign {
-        //% block="Left"
+        //% block="Links"
         Left,
-        //% block="Centre"
+        //% block="Midden"
         Centre,
-        //% block="Right"
+        //% block="Rechts"
         Right
     }
 
     export enum ShowPage {
-        //% block="Single"
+        //% block="enkel"
         Single,
-        //% block="Double"
+        //% block="dubbel"
         Double
     }
 
@@ -168,8 +168,8 @@ namespace Kitronik_VIEWTEXT32 {
     * @param delaySelected is the time between updating the LCD for show eg: 1500
     */
     //% blockId=kitronik_VIEWTEXT32_show_Parameter
-    //% group=Format
-    //% block="show format: show alignment %alignmentSelected| page update %pageUpdate| delay(ms) %delaySelected"
+    //% group=Instellingen
+    //% block="uitlijnen %alignmentSelected| update %pageUpdate| wachttijd(ms) %delaySelected"
     //% delaySelected.min=500 delaySelected.max=4000
     //% weight=100 blockGap=8
     export function showParameter(alignmentSelected: ShowAlign, pageUpdate: ShowPage, delaySelected: number) {
@@ -187,7 +187,7 @@ namespace Kitronik_VIEWTEXT32 {
     */
     //% blockId=kitronik_VIEWTEXT32_show_string
     //% group=Show
-    //% block="show string %text"
+    //% block="toon tekens %text"
     //% text.shadowOptions.toString=true
     //% weight=95 blockGap=8
     export function showString(text: string) {
@@ -329,8 +329,8 @@ namespace Kitronik_VIEWTEXT32 {
     * @param text Inputted String to display on screen eg: "Hello!"
     */
     //% blockId=kitronik_VIEWTEXT32_display_single_line
-    //% group=Show
-    //% block="display on %selectedLine| line string %text"
+    //% group=Toon
+    //% block="toon op regel %selectedLine| de tekens %text"
     //% text.shadowOptions.toString=true
     //% weight=95 blockGap=8
     export function displaySingleLineString(selectedLine: DisplayLine, text: string) {
@@ -368,8 +368,8 @@ namespace Kitronik_VIEWTEXT32 {
     * @param delaySelected is the time between updating the LCD for scrolling eg: 500
     */
     //% blockId=kitronik_VIEWTEXT32_scroll_Parameter
-    //% group=Format
-    //% block="scroll format: scroll direction %directionSelected| position start %formatStart| position finish %formatFinish| delay(ms) %delaySelected"
+    //% group=Instellingen
+    //% block="scroll-richting %directionSelected| startpositie %formatStart| eindpositie %formatFinish| wachttijd(ms) %delaySelected"
     //% delaySelected.min=100 delaySelected.max=1000
     //% weight=75 blockGap=8
     export function scrollParameter(directionSelected: ScrollDirection, formatStart: ScrollPosition, formatFinish: ScrollPosition, delaySelected: number) {
@@ -388,8 +388,8 @@ namespace Kitronik_VIEWTEXT32 {
     * @param text to scroll across the display eg: "Hello!"
     */
     //% blockId=kitronik_VIEWTEXT32_scroll_string
-    //% group=Show
-    //% block="on %selectedLine| scroll text string %text"
+    //% group=Toon
+    //% block="op regel %selectedLine| scroll tekens %text"
     //% text.shadowOptions.toString=true
     //% weight=75 blockGap=8
     export function scrollString(selectedLine: DisplayLine, text: string) {
@@ -487,8 +487,8 @@ namespace Kitronik_VIEWTEXT32 {
     * Clear display
     */
     //% blockId=kitronik_VIEWTEXT32_clear_Display
-    //% group=Show
-    //% block="clear display"
+    //% group=Toon
+    //% block="wis scherm"
     //% weight=75 blockGap=8
     export function clearDisplay() {
         if (initialised == false) {
@@ -511,8 +511,8 @@ namespace Kitronik_VIEWTEXT32 {
     * @param selectedLine is the choice of which line to be cleared
     */
     //% blockId=kitronik_VIEWTEXT32_clear_Display_Line
-    //% group=Show
-    //% block="clear display line %selectedLine"
+    //% group=Toon
+    //% block="wis regel %selectedLine"
     //% weight=75 blockGap=8
     export function clearDisplayLine(selectedLine: DisplayLine) {
         if (initialised == false) {
@@ -529,7 +529,7 @@ namespace Kitronik_VIEWTEXT32 {
     * @param selectedEmoticon of which Emoticon
     */
     //% blockId=kitronik_VIEWTEXT32_display_Emoticon
-    //% group=Characters
+    //% group=Karakters
     //% block="%selectedEmoticon"
     //% weight=75 blockGap=8
     export function displayEmjoicon(selectedEmoticon: Emoticon): string {
