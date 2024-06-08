@@ -18,16 +18,16 @@ namespace Kitronik_VIEWTEXT32 {
 
     //Enums for selection from blocks
     export enum DisplayLine {
-        //% block="Boven"
+        //% block="boven"
         Top,
-        //% block="Onder"
+        //% block="onder"
         Bottom
     }
 
     export enum ScrollDirection {
-        //% block="Links"
+        //% block="links"
         Left,
-        //% block="Rechts"
+        //% block="rechts"
         Right
     }
 
@@ -39,18 +39,18 @@ namespace Kitronik_VIEWTEXT32 {
     }
 
     export enum ShowAlign {
-        //% block="Links"
+        //% block="links"
         Left,
-        //% block="Midden"
+        //% block="midden"
         Centre,
-        //% block="Rechts"
+        //% block="rechts"
         Right
     }
 
     export enum ShowPage {
-        //% block="enkel"
+        //% block="1 regel"
         Single,
-        //% block="dubbel"
+        //% block="2 regels"
         Double
     }
 
@@ -186,7 +186,7 @@ namespace Kitronik_VIEWTEXT32 {
     * @param text Inputted String to display on screen eg: "Hello!"
     */
     //% blockId=kitronik_VIEWTEXT32_show_string
-    //% group=Show
+    //% group=Toon
     //% block="toon tekens %text"
     //% text.shadowOptions.toString=true
     //% weight=95 blockGap=8
